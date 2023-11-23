@@ -1,0 +1,229 @@
+:root {
+  --color-secundaria: rgb(255, 255, 255);
+  --color-primaria: #4279ca;
+  --bg-color: rgb(0, 0, 0);
+
+  --mg: 0px;
+  --none: none;
+  --grid: grid;
+  --flex: flex;
+  --gap40: 40px;
+  --gap30: 30px;
+  --gap20: 20px;
+  --gap10: 10px;
+  --espaco50: 50px;
+  --espaco30: 30px;
+  --espaco20: 20px;
+  --espaco10: 10px;
+  --espacoduplo1: 10px 30px;
+}
+
+* {
+  margin: var(--mg);
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: var(--none);
+  margin: var(--mg);
+}
+body {
+  background: var(--bg-color);
+  width: 1500px;
+  /* padding: var(--espaco10) var(--espaco50) var(--espaco50) var(--espaco50); */
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+body {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* Barra de rolagem transparente */
+}
+
+/* Estilo para esconder a barra de rolagem no eixo horizontal (opcional) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Botão de rolagem transparente */
+}
+.navbar {
+  justify-content: start;
+  margin: 0 0 0 16px;
+}
+.li-class {
+  margin: 0 20px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+.li-class:hover {
+  background-color: var(--color-secundaria);
+}
+
+.a-class {
+  color: var(--color-secundaria);
+}
+.container-navegacao {
+  color: var(--color-secundaria);
+}
+
+.container-navegacao a {
+  color: inherit;
+}
+
+.conteudo-principal {
+  display: var(--grid);
+  grid-template-columns: repeat(4, 350px);
+  column-gap: var(--gap10);
+  row-gap: var(--gap20);
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--bg-color);
+  padding: 0 var(--espaco50) 10px var(--espaco50);
+  box-sizing: border-box;
+}
+
+.box-item,
+.box-item2 {
+  display: var(--grid);
+  text-align: center;
+  border: 3px solid var(--color-secundaria);
+  padding: 0 var(--espaco50) var(--espaco50) var(--espaco50);
+  border-radius: 20px;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+}
+.box-item2 {
+  padding: 0 var(--espaco50) 0 var(--espaco50);
+}
+
+.container-titulo {
+  width: 345px;
+}
+
+.box-item .texto-valor {
+  color: var(--color-primaria);
+}
+
+.box-item .container-titulo .titulo-item {
+  background-color: var(--color-primaria);
+  color: var(--color-secundaria);
+  padding: var(--espacoduplo1);
+  border-radius: 17px 17px 0 0;
+  position: relative;
+  top: 0px;
+}
+
+.box-item .texto-descricao {
+  color: var(--color-secundaria);
+  font-size: 14px;
+}
+
+.box-item2 .container-titulo .titulo-item {
+  background-color: var(--color-primaria);
+  color: var(--color-secundaria);
+  padding: var(--espacoduplo1);
+  border-radius: 17px 17px 0 0;
+  position: relative;
+  top: -1px;
+}
+
+.box-item2 .texto-valor {
+  color: var(--color-primaria);
+}
+.box-item2 .texto-descricao {
+  color: var(--color-secundaria);
+  font-size: 14px;
+}
+
+.box-item2 .box-circle {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: var(--espaco30) var(--espaco20) 0 var(--espaco20);
+  border-radius: 8px;
+  /* background: #fff; */
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.box-circle::before {
+  content: "0";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: var(--color-secundaria);
+  left: 47px;
+  bottom: 116px;
+  z-index: 1;
+}
+
+.box-circle::after {
+  content: "1";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: var(--color-secundaria);
+  right: 47px;
+  bottom: 116px;
+  z-index: 1;
+}
+
+.box-item2 .box-circle-progress {
+  display: var(--flex);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 220px;
+  width: 220px;
+  border-radius: 50% 50%;
+  /* shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 100%); */
+  background: conic-gradient(#ff0000 1deg, var(--bg-color) 0deg);
+  transform: rotate(-90deg);
+}
+
+.box-circle-progress::before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.box-circle-progress .progress-valor {
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  color: var(--color-secundaria);
+  transform: rotate(90deg);
+  right: -16px;
+}
+.btn {
+  grid-column: 4;
+  justify-self: center;
+  position: absolute;
+  top: 0px;
+  right: 55px;
+  margin: 10px;
+}
+
+/* Grafico de eixos */
+#myChart {
+  background: #000;
+}

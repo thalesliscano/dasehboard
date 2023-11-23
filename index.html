@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="./js/apiValues.js"></script>
+  <script src="./js/script.js"></script>
+
+  <title>Dashboard</title>
+</head>
+
+<body">
+  <nav class="navbar">
+    <header class="header">
+      <ul class="nav-class nav justify-content-center">
+        <li class="li-class nav-item"><a class="a-class nav-link active" href="./">Consumo de energia</a></li>
+        <li class="li-class nav-item"><a class="a-class nav-link active" href="/pagina2.html"> Termometria</a></li>
+        <li class="li-class nav-item"><a class="a-class nav-link active" href="./pagina3.html">Pagina 3</a></li>
+      </ul>
+    </header>
+  </nav>
+
+  <main class="conteudo-principal">
+
+    <div class="box-item">
+      <div class="container-titulo">
+        <h1 class="titulo-item">Tensão</h1>
+      </div>
+      <h2 class="tensao texto-valor"></h2>
+      <p class="texto-descricao">Tensao (v)</p>
+      <h2 class="tensaoF1 texto-valor"></h2>
+      <p class="texto-descricao">Tensao (v) F1</p>
+      <h2 class="tensaoF2 texto-valor"></h2>
+      <p class="texto-descricao">Tensao (v) F2</p>
+      <h2 class="tensaoF3 texto-valor"></h2>
+      <p class="texto-descricao">Tensao (v) F3</p>
+    </div>
+
+    <div class="box-item">
+      <div class="container-titulo">
+        <h1 class="titulo-item">Corrente</h1>
+      </div>
+      <h2 class="corrente texto-valor"></h2>
+      <p class="texto-descricao">Corrente (A)</p>
+      <h2 class="corrente1 texto-valor"></h2>
+      <p class="texto-descricao">Corrente (A) F1</p>
+      <h2 class="corrente2 texto-valor"></h2>
+      <p class="texto-descricao">Corrente (A) F2</p>
+      <h2 class="corrente3 texto-valor"></h2>
+      <p class="texto-descricao">Corrente (A) F3</p>
+    </div>
+
+    <div class="box-item">
+      <div class="container-titulo">
+        <h1 class="titulo-item">Potência Ativa</h1>
+      </div>
+      <h2 class="ativa texto-valor"></h2>
+      <p class="texto-descricao">Ativa (W)</p>
+      <h2 class="ativa1 texto-valor"></h2>
+      <p class="texto-descricao">Ativa (W) F1</p>
+      <h2 class="ativa2 texto-valor"></h2>
+      <p class="texto-descricao">Ativa (W) F2</p>
+      <h2 class="ativa3 texto-valor"></h2>
+      <p class="texto-descricao">Ativa (W) F3</p>
+    </div>
+
+    <div class="box-item">
+      <div class="container-titulo">
+        <h1 class="titulo-item">Potência Reativa</h1>
+      </div>
+      <h2 class="reativa texto-valor"></h2>
+      <p class="texto-descricao">Reativa (VAR)</p>
+      <h2 class="reativa1 texto-valor"></h2>
+      <p class="texto-descricao">Reativa (VAR) F1</p>
+      <h2 class="reativa2 texto-valor"></h2>
+      <p class="texto-descricao">Reativa (VAR) F2</p>
+      <h2 class="reativa3 texto-valor"></h2>
+      <p class="texto-descricao">Reativa (VAR) F3</p>
+    </div>
+
+    <!-- box item diferente -->
+    <div class="box-item2">
+      <div class="container-titulo">
+        <h1 class="titulo-item" style="top: 0px">Fator de potência do Circuito</h1>
+      </div>
+      <div class="box-circle">
+        <div class="box-circle-progress">
+          <span class="circuito progress-valor">0</span>
+        </div>
+      </div>
+      <p class="texto-descricao">Fator 1</p>
+    </div>
+
+    <div class="box-item2">
+      <div class="container-titulo">
+        <h1 class="titulo-item" style="top: 0px">Fator de potência fase 1</h1>
+      </div>
+      <div class="box-circle">
+        <div class="box-circle-progress">
+          <span class="FPfase1 progress-valor">0</span>
+        </div>
+      </div>
+      <p class="texto-descricao">Fator 2</p>
+    </div>
+
+    <div class="box-item2">
+      <div class="container-titulo">
+        <h1 class="titulo-item" style="top: 0px">Fator de potência fase 2</h1>
+      </div>
+      <div class="box-circle">
+        <div class="box-circle-progress">
+          <span class="FPfase2 progress-valor">0</span>
+        </div>
+      </div>
+      <p class="texto-descricao">Fator 1</p>
+    </div>
+
+    <div class="box-item2">
+      <div class="container-titulo">
+        <h1 class="titulo-item">Fator de potência fase 3</h1>
+      </div>
+      <div class="box-circle">
+        <div class="box-circle-progress ultimo-elemento">
+          <span class="FPfase3 progress-valor">0</span>
+        </div>
+      </div>
+      <p class="texto-descricao">Fator 3</p>
+    </div>
+    <button type="button" class="btn btn-primary" id="botaoAtualizar"> <i class="bi bi-arrow-clockwise"></i></button>
+  </main>
+
+  <!-- Na onde eu coloco o numero pra fazer o medidor -->
+
+  <script src="./js/script.js">
+  </script>
+  </body>
+
+</html>
